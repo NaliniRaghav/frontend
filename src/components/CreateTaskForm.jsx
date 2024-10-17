@@ -18,7 +18,7 @@ export default function CreateTaskForm({ projectId, setProject }) {
     try {
       e.preventDefault();
       const res = await fetch(
-        `http://localhost:4000/api/projects/${projectId}/tasks`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/projects/${projectId}/tasks`,
         {
           method: "POST",
           headers: {
